@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { toast } from 'react-toastify';
+import { BiSearch } from 'react-icons/bi';
 import 'react-toastify/dist/ReactToastify.css';
 import css from './Searchbar.module.css';
 
@@ -24,7 +25,7 @@ export default class Searchbar extends Component {
     }
 
     // очистка форми після відправки
-    this.setState({ query: '' });
+    // this.setState({ query: '' });
   };
 
   render() {
@@ -33,6 +34,7 @@ export default class Searchbar extends Component {
         <form className={css.SearchForm} onSubmit={this.handleSubmit}>
           <button type="submit" className={css.SearchForm__button}>
             <span className={css.SearchForm__button__label}>Search</span>
+            <BiSearch size={24} />
           </button>
 
           <input

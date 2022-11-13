@@ -68,7 +68,7 @@ export class App extends Component {
         <Searchbar onSubmit={this.handleSumbit} />
         {this.state.isLoading && <Loader />}
         <ImageGallery images={this.state.images} openModal={this.toggleModal} />
-        {!!this.state.images.length && (
+        {this.state.images.length > 0 && (
           <Button onLoadMore={this.handleLoadMore} />
         )}
         {this.state.showModal && (
